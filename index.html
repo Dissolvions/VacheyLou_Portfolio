@@ -3,11 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/portfolio/favicon.png"
+    />
+
+    <style>
+      @media (max-width: 991px) {
+        #custom-cursor {
+          display: none !important;
+        }
+        body {
+          cursor: auto !important; /* Rétablit le doigt/curseur normal */
+        }
+      }
+    </style>
+
+    <title>Portfolio - Lou Vachey | Designer Créatif & 3D</title>
     <meta
       name="description"
-      content="Portfolio de Lou Vachey, Designer Créatif Junior. Design UI, 3D et Développement Web."
+      content="Portfolio de Lou Vachey, étudiante en BUT MMI. Designer Créatif Junior spécialisée en UI Design, Motion Design, Animation 3D et Développement Web."
     />
-    <title>Portfolio - Lou Vachey</title>
+    <meta
+      name="keywords"
+      content="Lou Vachey, Portfolio, Design, MMI, UI Design, Motion Design, 3D, Blender, Webfesign, Étudiante, Stage"
+    />
+    <meta name="author" content="Lou Vachey" />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://dissolvions.github.io/portfolio-lou/"
+    />
+    <meta
+      property="og:title"
+      content="Portfolio - Lou Vachey | Designer Créatif"
+    />
+    <meta
+      property="og:description"
+      content="Découvrez mes projets en Design 3D, Motion Design et Développement Web. Étudiante en recherche de stage."
+    />
+    <meta property="og:image" content="assets/portfolio/acceuillight1.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,6 +58,7 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
   </head>
+
   <body class="light-mode">
     <div id="custom-cursor"></div>
 
@@ -176,16 +216,21 @@
             <h3 class="title-pink">Compétences</h3>
             <p>
               Mon profil polyvalent me permet d'intervenir sur toute la chaîne
-              de production numérique : de la conception visuelle (UI, 3D) à
-              l'intégration technique (Front-end, Moteurs de jeu). Je privilégie
-              une approche rigoureuse et créative pour répondre aux besoins
+              de production numérique : de la conception visuelle et
+              <strong>l'animation</strong> (UI, <strong>Motion Design</strong>,
+              3D) à l'intégration technique (Front-end, Moteurs de jeu). Je
+              privilégie une approche créative pour
+              <strong>donner vie aux interfaces</strong> et répondre aux besoins
               utilisateurs.
             </p>
 
             <div class="skills-grid">
               <div class="skill-col">
-                <h4>Design & UI</h4>
-                <p>Figma, Photoshop, Illustrator, InDesign, Procreate</p>
+                <h4>Design UX & UI</h4>
+                <p>
+                  Figma, Photoshop, Illustrator, InDesign, Procreate, DaVinci
+                  Resolve
+                </p>
               </div>
               <div class="skill-col">
                 <h4>3D & Motion</h4>
@@ -207,7 +252,6 @@
               <a
                 href="assets/portfolio/cv_lou_vachey.pdf"
                 target="_blank"
-                download="CV_Lou_Vachey.pdf"
                 class="btn-rounded btn-pink interactive-link"
                 >Télécharger mon CV</a
               >
@@ -356,12 +400,13 @@
             <div class="project-desc">
               <p>
                 <strong>Contexte :</strong> Développement d'un jeu de
-                personnalisation d'avatar (Dress-Up) complet.
+                personnalisation d'avatar (Dress-Up).
               </p>
               <p>
-                <strong>Réalisations :</strong> Création de l'univers graphique
-                et illustration de +50 assets sur Procreate. Conception et
-                programmation C# de l'interface utilisateur (UI) sous Unity.
+                <strong>Réalisations :</strong> En charge de toute la partie
+                visuelle et de l'intégration UI. J'ai illustré les décors et les
+                costumes sur Procreate. J'ai ensuite assuré le scripting C# pour
+                rendre les boutons et le système d'inventaire fonctionnels.
               </p>
               <a
                 href="https://mira974.itch.io/beauty-dollz"
@@ -397,15 +442,19 @@
               <span class="tag tag-pink">Montage Vidéo</span>
             </div>
             <div class="project-desc">
-              <p>
-                <strong>Contexte :</strong> Prototype de jeu de plateforme 3D
-                narratif dans un univers onirique.
-              </p>
-              <p>
-                <strong>Réalisations :</strong> Composition des environnements
-                et éclairage (Lumen) sous Unreal Engine 5. Modélisation d'assets
-                architecturaux modulaires optimisés sous Blender.
-              </p>
+              <div class="project-desc">
+                <p>
+                  <strong>Contexte :</strong> Développement d'un jeu de parcours
+                  (Platformer 3D) sur le moteur Unreal Engine.
+                </p>
+                <p>
+                  <strong>Réalisations :</strong> J'ai assuré la conception
+                  complète des décors, ainsi que la création des textures et de
+                  la lumière pour les niveaux 1 et 2. J'ai également pris en
+                  charge la direction et le montage du trailer promotionnel du
+                  jeu.
+                </p>
+              </div>
             </div>
           </article>
 
@@ -484,12 +533,14 @@
             <div class="project-desc">
               <p>
                 <strong>Contexte :</strong> Adaptation web interactive du jeu de
-                cour de récréation traditionnel.
+                poule, renard, Vipère.
               </p>
               <p>
-                <strong>Réalisations :</strong> Programmation intégrale de la
-                logique de jeu en JavaScript natif. Intégration d'une interface
-                responsive et animations CSS.
+                <strong>Réalisations :</strong> Programmation en JavaScript
+                natif, incluant une courbe de difficulté progressive (la vitesse
+                du jeu accélère à chaque réussite). Intégration d'une interface
+                responsive et d'animations CSS fluides. J'ai également réalisé
+                et dessiné tous les assets graphiques.
               </p>
             </div>
           </article>
@@ -513,7 +564,6 @@
               <a
                 href="assets/portfolio/cv_lou_vachey.pdf"
                 target="_blank"
-                download="CV_Lou_Vachey.pdf"
                 class="btn-rounded btn-pink interactive-link"
                 >Télécharger mon CV</a
               >
@@ -524,7 +574,7 @@
         <section id="motion-design" class="page-section">
           <h2 class="section-title">Motion Design</h2>
           <article class="project-item">
-            <div class="project-meta">Projet Universitaire • 2024 • Solo</div>
+            <div class="project-meta">Projet Personnel • 2024</div>
             <h3 class="title-pink">Le vrai métier des Philosophes</h3>
             <div class="video-placeholder interactive-link">
               <iframe
@@ -539,13 +589,15 @@
             </div>
             <div class="project-desc">
               <p>
-                <strong>Contexte :</strong> Création d'un spot promotionnel pour
-                la maison d'édition Fayard.
+                <strong>Contexte :</strong> Création d'une vidéo promotionnelle
+                format réseaux sociaux pour le livre "Le vrai métier des
+                philosophes" (Éditions Fayard).
               </p>
               <p>
-                <strong>Réalisations :</strong> Animation en style "papier
-                découpé" (Cut-out) avec utilisation de caméras 3D dans After
-                Effects. Compositing avancé et synchronisation labiale.
+                <strong>Réalisations :</strong> Direction artistique en papier
+                découpé (Cut-out) inspirée du style France Culture. Animation
+                dynamique et effets visuels réalisés sous After Effects et
+                Blender pour mettre en valeur le contenu du livre.
               </p>
             </div>
           </article>
@@ -613,13 +665,14 @@
             </div>
             <div class="project-desc">
               <p>
-                <strong>Contexte :</strong> Conception d'interface diégétique
-                pour un concept de jeu d'horreur psychologique.
+                <strong>Contexte :</strong> Conception d'un prototype en motion
+                design de jeu "Point & Click" à ambiance horrifique.
               </p>
               <p>
                 <strong>Réalisations :</strong> Utilisation de la
-                photogrammétrie pour numériser un environnement réel.
-                Modélisation low-poly des assets et animation de l'interface.
+                photogrammétrie pour numériser l'environnement et obtenir un
+                rendu "glitché". Modélisation 3D sur Blender des éléments
+                narratifs (boîte de médicaments, visage, portail).
               </p>
             </div>
           </article>
@@ -712,13 +765,15 @@
             </div>
             <div class="project-desc">
               <p>
-                <strong>Contexte :</strong> Campagne de sensibilisation vidéo
-                sur le droit à l'avortement.
+                <strong>Contexte :</strong> Ce projet pour Amnesty International
+                vise à sensibiliser aux droits à l'avortement en racontant
+                l'histoire réelle de Justyna.
               </p>
               <p>
-                <strong>Réalisations :</strong> Écriture du script et
-                élaboration du storyboard. Illustration des plans et animation
-                motion design 2D sur After Effects.
+                <strong>Réalisations :</strong> En binôme, nous avons produit
+                une animation 2D complète. Nous avons commencé par l'élaboration
+                du storyboard avant d'animer les séquences à l'aide d'After
+                Effects.
               </p>
             </div>
           </article>
@@ -742,7 +797,6 @@
               <a
                 href="assets/portfolio/cv_lou_vachey.pdf"
                 target="_blank"
-                download="CV_Lou_Vachey.pdf"
                 class="btn-rounded btn-pink interactive-link"
                 >Télécharger mon CV</a
               >
@@ -753,8 +807,8 @@
         <section id="animation-3d" class="page-section">
           <h2 class="section-title">Animation 3D</h2>
           <article class="project-item">
-            <div class="project-meta">Projet Universitaire • 2025</div>
-            <h3 class="title-pink">Karamoove "Cirkus"</h3>
+            <div class="project-meta">Projet Personnel • 2025</div>
+            <h3 class="title-pink">Karamoove 2025 "Cirkus"</h3>
 
             <div
               class="video-placeholder interactive-link"
@@ -810,17 +864,20 @@
             <div class="tags">
               <span class="tag tag-green">Blender</span
               ><span class="tag tag-green">Substance Painter</span
-              ><span class="tag tag-pink">Rigging</span>
+              ><span class="tag tag-pink">UV Mapping</span>
+              <span class="tag tag-pink">Modélisation 3D</span>
             </div>
             <div class="project-desc">
               <p>
-                <strong>Contexte :</strong> Production d'un court-métrage
-                d'animation 3D de fin d'année.
+                <strong>Contexte :</strong> Participation à l'édition 2025 du
+                "Karamove". Production en groupe d'une animation 3D de 10
+                secondes sur la thématique du cirque.
               </p>
               <p>
-                <strong>Réalisations :</strong> Rigging des personnages pour
-                l'animation. Texturing PBR avancé sous Substance Painter et
-                animation des plans clés.
+                <strong>Réalisations :</strong> Je me suis concentrée sur la
+                création de l'environnement et des accessoires. J'ai réalisé la
+                modélisation, le dépliage UV et le texturing des assets (cheval
+                de carrousel, quilles, ballons) ainsi que du décor principal.
               </p>
             </div>
           </article>
@@ -833,8 +890,8 @@
           </div>
 
           <article class="project-item">
-            <div class="project-meta">Projet Personnel • 2023</div>
-            <h3 class="title-pink">Visualiseur Audio</h3>
+            <div class="project-meta">Projet Universitaire • 2023</div>
+            <h3 class="title-pink">Visualiseur</h3>
             <div class="video-placeholder interactive-link">
               <iframe
                 src="https://www.youtube.com/embed/cImV351z5zc"
@@ -868,17 +925,21 @@
             </div>
             <div class="tags">
               <span class="tag tag-green">Blender</span
-              ><span class="tag tag-green">After Effect</span>
+              ><span class="tag tag-green">After Effects</span>
             </div>
             <div class="project-desc">
               <p>
-                <strong>Contexte :</strong> Expérimentation technique sur la
-                synchronisation son/image (Audio Reactive).
+                <strong>Contexte :</strong> Création d'une animation en boucle
+                (loop) pour un visualiseur. Mon objectif était de concevoir un
+                "mini-monde" rassurant et en constant changement, inspiré par la
+                mélodie.
               </p>
               <p>
-                <strong>Réalisations :</strong> Création d'un système de
-                particules et de lumières réactifs aux fréquences audio via le
-                Graph Editor de Blender.
+                <strong>Réalisations :</strong> Intégration de prises de vues
+                réelles sur fond vert (incrustation) dans un environnement 3D.
+                Modélisation complète du décor (zones intérieure et extérieure)
+                et animation d'un cycle jour-nuit pour diversifier la mise en
+                scène.
               </p>
             </div>
           </article>
@@ -893,6 +954,10 @@
           <article class="project-item">
             <div class="project-meta">Recherche & Développement</div>
             <h3 class="title-pink">Expérimentations 3D</h3>
+            <div class="tags">
+              <span class="tag tag-green">Blender</span
+              ><span class="tag tag-pink">After Effects</span>
+            </div>
             <div style="margin-bottom: 40px">
               <div class="video-placeholder interactive-link">
                 <iframe
@@ -901,9 +966,8 @@
                 ></iframe>
               </div>
               <p>
-                <strong>01. Shading Organique :</strong> Étude approfondie du
-                rendu réaliste (Subsurface Scattering) de matières organiques
-                sous Blender.
+                Expérimentation réalisée sur Blender et After Effects, mettant
+                en scène un effet de rotation sur des dents.
               </p>
             </div>
             <div
@@ -919,10 +983,7 @@
                   allowfullscreen
                 ></iframe>
               </div>
-              <p>
-                <strong>02. Animation Short :</strong> Format court dynamique
-                explorant le rythme, la boucle et le mouvement fluide.
-              </p>
+              <p>Expérimentation de l'animation réalisée sur Blender.</p>
             </div>
             <div
               style="
@@ -937,13 +998,8 @@
                 ></iframe>
               </div>
               <p>
-                <strong>03. Simulation :</strong> Tests techniques sur les
-                fluides et la physique des corps mous (Soft Body).
+                Expérimentation de l'animation de texte réalisée sur Blender.
               </p>
-            </div>
-            <div class="tags">
-              <span class="tag tag-green">Blender</span
-              ><span class="tag tag-pink">R&D</span>
             </div>
           </article>
 
@@ -966,7 +1022,6 @@
               <a
                 href="assets/portfolio/cv_lou_vachey.pdf"
                 target="_blank"
-                download="CV_Lou_Vachey.pdf"
                 class="btn-rounded btn-pink interactive-link"
                 >Télécharger mon CV</a
               >
@@ -1051,7 +1106,6 @@
               <a
                 href="assets/portfolio/cv_lou_vachey.pdf"
                 target="_blank"
-                download="CV_Lou_Vachey.pdf"
                 class="btn-rounded btn-pink interactive-link"
                 >Télécharger mon CV</a
               >
@@ -1093,13 +1147,16 @@
             </div>
             <div class="project-desc">
               <p>
-                <strong>Contexte :</strong> Refonte fictive de l'identité
-                visuelle du conservatoire de Montreuil.
+                <strong>Contexte :</strong> Dans le cadre de la rénovation du
+                conservatoire de Montreuil, ce projet consistait en une série de
+                recherches graphiques pour capturer l'essence des années 70,
+                époque de sa création.
               </p>
               <p>
-                <strong>Réalisations :</strong> Création d'une série d'affiches
-                basées sur la technique du collage pour évoquer l'architecture
-                composite et l'esprit des années 70 du bâtiment.
+                <strong>Réalisations :</strong> Exploration de la technique du
+                collage à travers diverses compositions. Ces visuels, conçus en
+                structures et assemblages, rappellent le style graphique de
+                l'époque ainsi que l'architecture composite du bâtiment.
               </p>
             </div>
           </article>
@@ -1181,16 +1238,21 @@
             <div class="tags">
               <span class="tag tag-green">Illustrator</span
               ><span class="tag tag-pink">Typographie</span>
+              <span class="tag tag-pink">InDesign</span>
             </div>
             <div class="project-desc">
               <p>
-                <strong>Contexte :</strong> Conception d'un programme théâtral
-                expérimental pour la saison VOX.
+                <strong>Contexte :</strong> Conception graphique du dépliant de
+                la programmation théâtrale VOX. L'objectif était de proposer une
+                mise en page purement typographique où les lettres deviennent
+                expressives et reflètent la programmation artistique.
               </p>
               <p>
-                <strong>Réalisations :</strong> Mise en page typographique
-                créative. Travail sur la déformation analogique (scanner) et
-                l'effet miroir pour visualiser la résonance du son.
+                <strong>Réalisations :</strong> Mon processus a débuté par des
+                expérimentations au scanner pour offrir une résonance visuelle
+                aux mots, similaire à celle de la musique. J'ai ensuite appliqué
+                un effet miroir au texte pour le transformer en image et
+                densifier la lecture.
               </p>
             </div>
           </article>
@@ -1203,7 +1265,7 @@
           </div>
 
           <article class="project-item">
-            <div class="project-meta">Projet Universitaire • 2021</div>
+            <div class="project-meta">Projet Universitaire • 2025</div>
             <h3 class="title-pink">USPN Alumni</h3>
 
             <img
@@ -1235,15 +1297,20 @@
                 style="height: auto; object-fit: contain"
               />
             </div>
-            <div class="tags"><span class="tag tag-green">Photoshop</span></div>
+            <div class="tags">
+              <span class="tag tag-green">Photoshop</span>
+            </div>
             <div class="project-desc">
               <p>
-                <strong>Contexte :</strong> Dynamisation de la communication
-                digitale du réseau des anciens élèves de l'université.
+                <strong>Contexte :</strong> Dans le but de dynamiser le réseau
+                des anciens élèves, cette campagne de communication visait à
+                inciter les étudiants actuels à s'inscrire sur la plateforme
+                Alumni de l'université.
               </p>
               <p>
-                <strong>Réalisations :</strong> Création de templates pour
-                réseaux sociaux respectant la charte graphique institutionnelle.
+                <strong>Réalisations :</strong> Création de contenus visuels
+                spécifiquement pour le compte Instagram des Alumni. J'ai
+                appliqué et décliné la charte graphique de l'USPN.
               </p>
             </div>
           </article>
@@ -1284,12 +1351,12 @@
             <div class="project-desc">
               <p>
                 <strong>Contexte :</strong> Maquette d'un livre de cuisine
-                illustré sur le thème des soupes.
+                illustré sur le thème des soupes du monde.
               </p>
               <p>
-                <strong>Réalisations :</strong> Mise en page éditoriale sur
-                double page et création d'illustrations vectorielles originales
-                des ingrédients et plats.
+                <strong>Réalisations :</strong> Conception de la mise en page
+                éditoriale et création de gabarits sur double page ainsi que la
+                réalisation des illustrations.
               </p>
             </div>
           </article>
@@ -1313,7 +1380,6 @@
               <a
                 href="assets/portfolio/cv_lou_vachey.pdf"
                 target="_blank"
-                download="CV_Lou_Vachey.pdf"
                 class="btn-rounded btn-pink interactive-link"
                 >Télécharger mon CV</a
               >
@@ -1324,7 +1390,7 @@
         <section id="web-vr" class="page-section">
           <h2 class="section-title">Développement Web & VR</h2>
           <article class="project-item">
-            <div class="project-meta">Projet Universitaire • 2023</div>
+            <div class="project-meta">Projet Universitaire • 2022</div>
             <h3 class="title-pink">Labyrinthe VR (A-Frame)</h3>
             <div class="gallery-grid">
               <img
@@ -1350,18 +1416,18 @@
             </div>
             <div class="tags">
               <span class="tag tag-green">A-Frame</span
-              ><span class="tag tag-green">HTML/CSS</span
-              ><span class="tag tag-pink">Sound Design</span>
+              ><span class="tag tag-green">HTML/CSS</span>
             </div>
             <div class="project-desc">
               <p>
                 <strong>Contexte :</strong> Conception d'un labyrinthe immersif
-                en réalité virtuelle (WebVR) visant à désorienter l'utilisateur.
+                en réalité virtuelle (WebVR) avec pour objectif de désorienter
+                l'utilisateur.
               </p>
               <p>
-                <strong>Réalisations :</strong> Développement d'un environnement
-                3D oppressant (décor médiéval, brouillard volumétrique) et
-                intégration de sons spatialisés.
+                <strong>Réalisations :</strong> J'ai conçu un environnement
+                médiéval avec des murs ornés de vitraux et ajouté du brouillard
+                pour accentuer l'ambiance oppressante.
               </p>
             </div>
           </article>
@@ -1374,7 +1440,7 @@
           </div>
 
           <article class="project-item">
-            <div class="project-meta">Projet Universitaire • 2023</div>
+            <div class="project-meta">Projet Universitaire • 2022</div>
             <h3 class="title-pink">Expérimentation WebVR</h3>
             <div class="video-placeholder interactive-link">
               <iframe
@@ -1419,12 +1485,15 @@
             </div>
             <div class="project-desc">
               <p>
-                <strong>Contexte :</strong> Exploration technique des capacités
-                du framework A-Frame pour le web.
+                <strong>Contexte :</strong> Conception d'une expérience en
+                réalité virtuelle visant à créer l'illusion d'une grotte
+                composée de cristaux.
               </p>
               <p>
-                <strong>Réalisations :</strong> Conception et intégration d'une
-                scène 3D interactive compatible directement dans le navigateur.
+                <strong>Réalisations :</strong> J'ai réalisé la structure de
+                base via une maquette en papier (pop-up) que j'ai numérisée.
+                J'ai ensuite codé les animations lumineuses sur VSCode pour
+                simuler le scintillement des cristaux.
               </p>
             </div>
           </article>
@@ -1437,7 +1506,7 @@
           </div>
 
           <article class="project-item">
-            <div class="project-meta">Projet Personnel • 2025</div>
+            <div class="project-meta">Projet Universitaire • 2025</div>
             <h3 class="title-pink">Sites Web</h3>
 
             <img
@@ -1486,13 +1555,15 @@
             </div>
             <div class="project-desc">
               <p>
-                <strong>Objectif :</strong> Développement complet du présent
-                portfolio personnel.
+                <strong>Contexte :</strong> Conception et développement de
+                plusieurs sites web (dont ce portfolio) et de prototypes de
+                sites fictifs.
               </p>
               <p>
-                <strong>Réalisations :</strong> Design UI/UX et intégration
-                front-end avancée (Mode sombre, Responsive Design, Animations JS
-                et effets de parallaxe).
+                <strong>Réalisations :</strong> Intégration complète en HTML,
+                CSS et JavaScript. J'ai implémenté des fonctionnalités
+                interactives variées comme le mode sombre (Dark Mode) et des
+                effets de parallaxe pour dynamiser la navigation.
               </p>
             </div>
           </article>
@@ -1516,7 +1587,6 @@
               <a
                 href="assets/portfolio/cv_lou_vachey.pdf"
                 target="_blank"
-                download="CV_Lou_Vachey.pdf"
                 class="btn-rounded btn-pink interactive-link"
                 >Télécharger mon CV</a
               >

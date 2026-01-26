@@ -23,7 +23,10 @@
 
   /* IMAGES */
   --bg-image: url("assets/portfolio/Fond.png");
-  --cursor-img: url("assets/portfolio/souris1light.PNG");
+
+  /* CURSEUR (Vérifie bien le nom de tes images ici !) */
+  --cursor-normal: url("assets/portfolio/souris1light.PNG");
+  --cursor-hover: url("assets/portfolio/souris2light.PNG");
 
   /* TYPOGRAPHIE */
   --font-main: "Inter", sans-serif;
@@ -58,7 +61,9 @@ body.dark-mode {
   --box-bg: #151d29;
   --overlay-color: rgba(16, 26, 36, 0.9);
 
-  --cursor-img: url("assets/portfolio/souris1dark.PNG");
+  /* CURSEUR DARK */
+  --cursor-normal: url("assets/portfolio/souris1dark.PNG");
+  --cursor-hover: url("assets/portfolio/souris2dark.PNG");
 }
 
 /* --- 3. BASE & RESET --- */
@@ -75,35 +80,14 @@ body {
   font-weight: var(--fw-regular);
   font-size: var(--fs-para);
   overflow-x: hidden;
-  cursor: none;
+  cursor: none; /* On cache le curseur par défaut sur le body */
   line-height: 1.6;
   transition:
     background-color 0.3s,
     color 0.3s;
 }
 
-#custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 60px;
-  height: 60px;
-  background-image: var(--cursor-img);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  pointer-events: none;
-  z-index: 999999;
-  transform: translate(-50%, -50%);
-  transition:
-    width 0.2s,
-    height 0.2s;
-}
-body.hovering #custom-cursor {
-  width: 90px;
-  height: 90px;
-}
-
+/* On s'assure de cacher le curseur système partout sur PC */
 a,
 button,
 iframe,
@@ -326,7 +310,7 @@ h4 {
   margin-bottom: 10px;
 }
 
-/* BOUTONS */
+/* BOUTONS GENERAUX */
 .action-buttons {
   display: flex;
   gap: 20px;
@@ -588,113 +572,36 @@ h4 {
   border-radius: 10px;
 }
 
-/* MOBILE */
+/* MOBILE HEADER (DEFAUT CACHÉ SUR PC) */
 .mobile-header {
   display: none;
 }
 
-@media (max-width: 1100px) {
-  .container {
-    flex-direction: column;
-  }
-  .content {
-    margin-left: 0;
-    width: 100%;
-    padding: 100px 20px;
-  }
-
-  .sidebar {
-    transform: translateX(-100%);
-    width: 100%;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    z-index: 998;
-  }
-  .sidebar.active {
-    transform: translateX(0);
-  }
-
-  .desktop-only,
-  .scroll-progress-track {
-    display: none;
-  }
-
-  .mobile-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    background: var(--bg-color);
-    padding: 0 20px;
-    z-index: 999;
-    border-bottom: 1px solid var(--sidebar-border);
-  }
-  .mobile-logo-box img {
-    height: 40px;
-  }
-
-  .burger-menu span {
-    display: block;
-    width: 30px;
-    height: 3px;
-    background: var(--title-color);
-    margin: 6px 0;
-  }
-
-  .theme-btn {
-    position: static;
-    box-shadow: none;
-    border: none;
-  }
-  .skills-grid,
-  .contact-icons.project-item {
-    grid-template-columns: 1fr !important;
-  }
-  .main-title {
-    font-size: 2.8rem;
-  }
-  .subtitle-crea {
-    font-size: 1.6rem;
-  }
-  .gallery-grid {
-    grid-template-columns: 1fr !important;
-  }
-  .gallery-img {
-    height: auto;
-    max-height: 300px;
-  }
-}
-
-/* --- 12. LIGHTBOX (AGRANDISSEMENT IMAGES) --- */
+/* --- LIGHTBOX (AGRANDISSEMENT IMAGES/VIDEOS) --- */
 #lightbox {
-  display: none; /* Caché par défaut */
+  display: none;
   position: fixed;
   z-index: 100000;
-  padding-top: 50px;
+  padding-top: 0;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
   background-color: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(5px);
+  align-items: center;
+  justify-content: center;
 }
 
 .lightbox-content {
   margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 1200px;
+  display: none;
+  max-width: 90%;
   max-height: 80vh;
   object-fit: contain;
-  animation: zoom 0.3s;
   border-radius: 5px;
   box-shadow: 0 0 50px rgba(255, 255, 255, 0.1);
+  animation: zoom 0.3s;
 }
 
 @keyframes zoom {
@@ -708,99 +615,8 @@ h4 {
   }
 }
 
-/* Croix de fermeture */
-.lb-close {
-  position: absolute;
-  top: 20px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-  cursor: pointer;
-  z-index: 100001;
-}
-.lb-close:hover,
-.lb-close:focus {
-  color: var(--title-color);
-}
-
-/* Flèches Suivant / Précédent */
-.lb-prev,
-.lb-next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 30px;
-  transition: 0.3s;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.lb-next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-.lb-prev {
-  left: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.lb-prev:hover,
-.lb-next:hover {
-  background-color: var(--title-color);
-  color: var(--bg-color);
-}
-
-/* Responsive Lightbox */
-@media only screen and (max-width: 700px) {
-  .lightbox-content {
-    width: 95%;
-  }
-  .lb-prev,
-  .lb-next {
-    padding: 10px;
-    font-size: 20px;
-  }
-}
-
-/* --- 12. LIGHTBOX & VIDEOS --- */
-#lightbox {
-  display: none;
-  position: fixed;
-  z-index: 100000;
-  padding-top: 0;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.95);
-  backdrop-filter: blur(5px);
-  align-items: center; /* Centre verticalement */
-  justify-content: center;
-}
-
-/* Image dans la Lightbox */
-.lightbox-content {
-  margin: auto;
-  display: none; /* Caché par défaut, géré par JS */
-  max-width: 90%;
-  max-height: 80vh;
-  object-fit: contain;
-  border-radius: 5px;
-  box-shadow: 0 0 50px rgba(255, 255, 255, 0.1);
-}
-
-/* Conteneur Vidéo dans la Lightbox */
 .lightbox-video-wrapper {
-  display: none; /* Caché par défaut, géré par JS */
+  display: none;
   width: 80%;
   max-width: 1000px;
   aspect-ratio: 16/9;
@@ -814,7 +630,6 @@ h4 {
   height: 100%;
 }
 
-/* Croix de fermeture */
 .lb-close {
   position: absolute;
   top: 20px;
@@ -822,15 +637,14 @@ h4 {
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
+  transition: 0.3s;
   cursor: pointer;
   z-index: 100001;
-  transition: 0.3s;
 }
 .lb-close:hover {
   color: var(--title-color);
 }
 
-/* Flèches */
 .lb-prev,
 .lb-next {
   cursor: pointer;
@@ -846,6 +660,7 @@ h4 {
   background-color: rgba(0, 0, 0, 0.3);
   user-select: none;
   z-index: 100001;
+  border-radius: 3px;
 }
 .lb-next {
   right: 0;
@@ -853,7 +668,7 @@ h4 {
 }
 .lb-prev {
   left: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 0 3px 3px 0;
 }
 .lb-prev:hover,
 .lb-next:hover {
@@ -861,7 +676,6 @@ h4 {
   color: var(--bg-color);
 }
 
-/* Bouton "Agrandir" sur les vidéos (Grid) */
 .video-placeholder {
   position: relative;
 }
@@ -895,5 +709,208 @@ h4 {
   .lb-next {
     padding: 10px;
     font-size: 20px;
+  }
+}
+
+/* =========================================
+   STYLE DU CURSEUR PERSONNALISÉ
+   ========================================= */
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* Taille agrandie comme demandé */
+  width: 60px;
+  height: 60px;
+
+  /* Image */
+  background-image: var(--cursor-normal);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  /* Pointe en haut à gauche pour la précision */
+  background-position: top left;
+
+  pointer-events: none;
+  z-index: 999999;
+
+  transition:
+    transform 0.1s,
+    background-image 0.2s;
+  transform: translate(0, 0);
+}
+
+/* Effet au survol (géré par JS) */
+#custom-cursor.hovered {
+  background-image: var(--cursor-hover);
+  transform: scale(1.1);
+}
+
+/* --- ANIMATION BOUTONS (Footer, Profil, Formulaire) --- */
+.main-footer .btn-pink,
+.action-buttons .btn-pink,
+.contact-form .btn-pink {
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.main-footer .btn-pink:hover,
+.action-buttons .btn-pink:hover,
+.contact-form .btn-pink:hover {
+  background-color: var(--box-bg);
+  color: var(--title-color);
+  border-color: var(--title-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================
+   RESPONSIVE & MOBILE
+   ========================================= */
+@media (max-width: 1100px) {
+  /* 1. LAYOUT GÉNÉRAL */
+  .container {
+    flex-direction: column;
+  }
+  .content {
+    margin-left: 0;
+    width: 100%;
+    /* Padding haut augmenté pour que le header ne cache pas le titre */
+    padding: 130px 20px 60px 20px;
+  }
+
+  /* 2. HEADER MOBILE (AGRANDI) */
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    /* Hauteur augmentée (de 70px à 100px) */
+    height: 100px;
+
+    background: var(--bg-color);
+    padding: 0 30px;
+    z-index: 999;
+    border-bottom: 1px solid var(--sidebar-border);
+    transition: background-color 0.3s;
+  }
+
+  .mobile-logo-box img {
+    /* Logo adapté */
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .burger-menu span {
+    display: block;
+    width: 35px;
+    height: 3px;
+    background: var(--title-color);
+    margin: 7px 0;
+  }
+
+  /* 3. MENU HAMBURGER (SIDEBAR) */
+  .sidebar {
+    transform: translateX(-100%);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    background-color: var(--bg-color);
+    transition: transform 0.3s ease;
+
+    /* Contenu poussé vers le bas pour ne pas être caché par le header */
+    padding-top: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    text-align: center;
+    overflow-y: auto;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .sidebar-content-wrapper {
+    padding: 0;
+    min-height: auto;
+  }
+
+  /* DESSIN DU MENU */
+  #sidebar-drawing {
+    display: block;
+    margin: 0 auto 40px auto;
+    max-width: 160px;
+    height: auto;
+  }
+
+  /* LIENS DU MENU */
+  .sidebar nav ul li {
+    margin-bottom: 25px;
+  }
+  .sidebar nav ul li a {
+    font-size: 1.6rem;
+    font-weight: var(--fw-bold);
+    display: block;
+  }
+
+  /* FOOTER DU MENU */
+  .sidebar-footer {
+    margin-top: 50px;
+    padding-bottom: 100px;
+    border-top: none;
+  }
+
+  /* --- ÉLÉMENTS CACHÉS --- */
+  .desktop-only,
+  .scroll-progress-track {
+    display: none;
+  }
+
+  .theme-btn {
+    position: static;
+    box-shadow: none;
+    border: none;
+  }
+
+  /* GRILLES 1 COLONNE */
+  .skills-grid,
+  .contact-icons.project-item,
+  .gallery-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .gallery-img {
+    height: auto;
+    max-height: 350px;
+  }
+
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  /* 4. CACHER LA SOURIS PERSO SUR MOBILE */
+  #custom-cursor {
+    display: none !important;
+  }
+  /* Rétablir le comportement tactile/système */
+  html,
+  body,
+  a,
+  button,
+  iframe,
+  .interactive-link,
+  input,
+  textarea {
+    cursor: auto !important;
   }
 }

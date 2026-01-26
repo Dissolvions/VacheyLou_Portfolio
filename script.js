@@ -6,42 +6,55 @@ document.addEventListener('DOMContentLoaded', () => {
     const burgerBtn = document.getElementById('burger-btn');
     const themeBtnPC = document.getElementById('theme-toggle-pc');
     const themeBtnMobile = document.getElementById('theme-toggle-mobile');
-    const cursor = document.getElementById('custom-cursor');
     const sidebarDrawing = document.getElementById('sidebar-drawing'); 
     const transitionImages = document.querySelectorAll('.trans-img');
     const mobileLogo = document.querySelector('.mobile-logo-box img');
+    
+    // Éléments pour le Curseur
+    const cursor = document.getElementById('custom-cursor');
+    const interactiveElements = document.querySelectorAll('.interactive-link, a, button, input, textarea, .gallery-img, .video-expand-btn, .lb-close, .lb-prev, .lb-next, iframe');
 
-    // --- 2. ASSETS ---
+    // --- 2. ASSETS (Images du site uniquement, le curseur est géré en CSS) ---
     const assets = {
         light: {
             drawDef: 'assets/portfolio/acceuillight1.PNG', 
             drawHov: 'assets/portfolio/acceuillight2.PNG',
-            trans: 'assets/portfolio/transitionlight.PNG',
-            cursor: 'url("assets/portfolio/souris1light.PNG")'
+            trans: 'assets/portfolio/transitionlight.PNG'
         },
         dark: {
             drawDef: 'assets/portfolio/acceuildark1.PNG',
             drawHov: 'assets/portfolio/acceuildark2.PNG',
-            trans: 'assets/portfolio/transitiondark.PNG',
-            cursor: 'url("assets/portfolio/souris1dark.PNG")'
+            trans: 'assets/portfolio/transitiondark.PNG'
         }
     };
 
-    // --- 3. CURSEUR ---
+    // --- 3. CURSEUR (NOUVELLE VERSION CORRIGÉE) ---
     if (cursor) {
+        // A. Mouvement : suit la souris
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
         });
-        const interactiveElements = document.querySelectorAll('.interactive-link, a, button, input, textarea, .gallery-img, .video-expand-btn, .lb-close, .lb-prev, .lb-next');
+
+        // B. Interactions (changement d'état au survol)
         interactiveElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
-                document.body.classList.add('hovering'); 
-                updateDrawingState(true); 
+                // Gestion spéciale pour les iframes (Youtube)
+                if (el.tagName === 'IFRAME') {
+                    cursor.style.opacity = "0"; // On cache le curseur perso pour laisser celui de Youtube
+                } else {
+                    cursor.classList.add("hovered"); // Passe en mode "clic" via CSS
+                    updateDrawingState(true); // Change le dessin de la sidebar
+                }
             });
+
             el.addEventListener('mouseleave', () => {
-                document.body.classList.remove('hovering');
-                updateDrawingState(false);
+                if (el.tagName === 'IFRAME') {
+                    cursor.style.opacity = "1"; // On réaffiche le curseur perso
+                } else {
+                    cursor.classList.remove("hovered"); // Retour en mode normal
+                    updateDrawingState(false); // Remet le dessin normal
+                }
             });
         });
     }
@@ -72,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateAssets(isDark);
     }
 
+    // Vérification du thème au chargement
     if(localStorage.getItem('theme') === 'dark') {
         document.body.classList.add('dark-mode');
         updateAssets(true);
@@ -177,11 +191,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (projectContainer) {
             // Récupérer TOUS les items média (Images ET Vidéos)
-            // On cherche les .gallery-img ET les iframes dans .video-placeholder
             const images = Array.from(projectContainer.querySelectorAll('.gallery-img'));
             const iframes = Array.from(projectContainer.querySelectorAll('.video-placeholder iframe'));
             
-            // On doit les trier par ordre d'apparition dans le DOM pour que la navigation soit logique
+            // On doit les trier par ordre d'apparition dans le DOM
             currentProjectItems = [...images, ...iframes].sort((a, b) => {
                 return (a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING) ? -1 : 1;
             });
@@ -200,6 +213,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // C. Mise à jour du contenu (Image ou Vidéo)
     function updateLightboxContent() {
+        if (!currentProjectItems[currentIndex]) return;
+        
         const item = currentProjectItems[currentIndex];
         
         if (item.tagName === 'IMG') {
