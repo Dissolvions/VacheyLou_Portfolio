@@ -1,0 +1,1658 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/portfolio/favicon.png"
+    />
+
+    <style>
+      @media (max-width: 991px) {
+        #custom-cursor {
+          display: none !important;
+        }
+        body {
+          cursor: auto !important; /* Rétablit le doigt/curseur normal */
+        }
+      }
+    </style>
+
+    <title>Portfolio - Lou Vachey | Designer Créatif & 3D</title>
+    <meta
+      name="description"
+      content="Portfolio de Lou Vachey, actuellement étudiante en Licence professionnelle Métiers du jeu vidéo. Designer Créatif Junior spécialisée en UI Design, Motion Design, Animation 3D et Développement Web."
+    />
+    <meta
+      name="keywords"
+      content="Lou Vachey, Portfolio, Design, MMI, UI Design, Motion Design, 3D, Blender, Webdesign, Étudiante, Stage"
+    />
+    <meta name="author" content="Lou Vachey" />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://dissolvions.github.io/portfolio-lou/"
+    />
+    <meta
+      property="og:title"
+      content="Portfolio - Lou Vachey, Designer Créatif"
+    />
+    <meta
+      property="og:description"
+      content="Découvrez mes projets en Design 3D, Motion Design et Développement Web. Étudiante Licence professionnelle Métiers du jeu vidéo
+."
+    />
+    <meta property="og:image" content="assets/portfolio/acceuillight1.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  </head>
+
+  <body class="light-mode">
+    <div id="custom-cursor"></div>
+
+    <div id="lightbox">
+      <span id="lightbox-close" class="lb-close">&times;</span>
+      <span id="lightbox-prev" class="lb-prev">&#10094;</span>
+
+      <img class="lightbox-content" id="lightbox-img" />
+
+      <div class="lightbox-video-wrapper" id="lightbox-video-container">
+        <iframe
+          id="lightbox-video"
+          frameborder="0"
+          allowfullscreen
+          allow="autoplay; encrypted-media"
+        ></iframe>
+      </div>
+
+      <span id="lightbox-next" class="lb-next">&#10095;</span>
+    </div>
+
+    <header class="mobile-header">
+      <div class="burger-menu" id="burger-btn">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="mobile-logo-box"></div>
+      <button id="theme-toggle-mobile" class="theme-btn">
+        <span class="iconify" data-icon="ph:moon-stars-bold"></span>
+      </button>
+    </header>
+
+    <div class="container">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-content-wrapper">
+          <div class="sidebar-top">
+            <div class="logo" id="logo-home">
+              <img
+                src="assets/portfolio/acceuillight1.png"
+                id="sidebar-drawing"
+                alt="Dessin Interactif"
+                class="theme-drawing interactive-link"
+              />
+            </div>
+
+            <nav>
+              <ul>
+                <li>
+                  <a
+                    href="#profil"
+                    class="nav-link interactive-link"
+                    data-section="profil"
+                    >Profil et Contact</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#jeu-video"
+                    class="nav-link interactive-link"
+                    data-section="jeu-video"
+                    >Jeu Vidéo</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#motion-design"
+                    class="nav-link interactive-link"
+                    data-section="motion-design"
+                    >Motion Design</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#animation-3d"
+                    class="nav-link interactive-link"
+                    data-section="animation-3d"
+                    >Animation 3D</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#illustrations"
+                    class="nav-link interactive-link"
+                    data-section="illustrations"
+                    >Illustrations</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#graphisme"
+                    class="nav-link interactive-link"
+                    data-section="graphisme"
+                    >Design Graphique</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#web-vr"
+                    class="nav-link interactive-link"
+                    data-section="web-vr"
+                    >Web et VR</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <footer class="sidebar-footer">
+            <p>Lou Vachey © 2025</p>
+            <p class="legal-text">
+              <a href="#" class="legal-link">Mentions Légales</a>
+            </p>
+          </footer>
+        </div>
+      </aside>
+
+      <main class="content">
+        <button
+          id="theme-toggle-pc"
+          class="theme-btn desktop-only interactive-link"
+        >
+          <span class="iconify" data-icon="ph:moon-stars-bold"></span>
+        </button>
+
+        <div class="scroll-progress-track desktop-only">
+          <div class="scroll-progress-bar" id="myBar"></div>
+        </div>
+
+        <section id="accueil" class="page-section active">
+          <div class="intro-accueil">
+            <div class="home-pitch">
+              <h1 class="main-title">
+                Lou Vachey<br /><span class="subtitle-crea"
+                  >Designer Créatif Junior</span
+                >
+              </h1>
+              <p class="pitch-text">
+                Actuellement étudiante
+                <strong></strong>
+                  en Licence professionnelle Métiers du jeu vidéo</strong
+                >
+                à l'IUT de Bobigny.
+              </p>
+              <a
+                href="#profil"
+                class="status-badge interactive-link nav-link"
+                data-section="profil"
+              >
+                <span class="pulse"></span>
+                En recherche d'un stage de 3 mois dans le domaine du Game Design
+                dès mars 2027
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="profil" class="page-section">
+          <h2 class="section-title">Profil Professionnel</h2>
+          <div class="text-block project-item">
+            <h3 class="title-pink">Compétences</h3>
+
+            <p>
+              J'interviens sur la chaîne de production
+              <strong>numérique et vidéoludique</strong> : de la conception
+              visuelle (UI, <strong>Motion Design</strong>, 3D) à l'intégration
+              technique (Front-end, <strong>Moteurs de jeu</strong>). Je
+              mobilise ces compétences pour structurer les interfaces, intégrer
+              les assets graphiques et développer des interactions adaptées aux
+              joueurs et aux utilisateurs.
+            </p>
+
+            <div class="skills-grid">
+              <div class="skill-col">
+                <h4>Design UX et UI</h4>
+                <p>
+                  Figma, Photoshop, Illustrator, InDesign, Procreate, DaVinci
+                  Resolve
+                </p>
+              </div>
+              <div class="skill-col">
+                <h4>Audiovisuel, Motion et 3D</h4>
+                <p>
+                  Blender, Unreal Engine, After Effects, Premiere Pro, Substance
+                  Painter
+                </p>
+              </div>
+              <div class="skill-col">
+                <h4>Développement</h4>
+                <p>HTML5/CSS3, JavaScript, Unity (C#), A-Frame</p>
+              </div>
+            </div>
+
+            <div
+              class="action-buttons"
+              style="display: flex; justify-content: center; margin-top: 60px"
+            >
+              <a
+                href="assets/portfolio/cv_lou_vachey.pdf"
+                target="_blank"
+                class="btn-rounded btn-pink interactive-link"
+                >Télécharger mon CV</a
+              >
+            </div>
+          </div>
+
+          <form
+            action="https://formspree.io/f/mjgynjpp"
+            method="POST"
+            target="_blank"
+            class="contact-form project-item"
+          >
+            <h3 class="title-pink">Me contacter</h3>
+            <div class="form-group">
+              <label>Nom / Prénom</label>
+              <input
+                type="text"
+                name="name"
+                class="interactive-link"
+                placeholder="Votre nom"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input
+                type="email"
+                name="email"
+                class="interactive-link"
+                placeholder="votre@email.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea
+                rows="5"
+                name="message"
+                class="interactive-link"
+                placeholder="Objet de votre demande..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-rounded btn-pink interactive-link">
+              Envoyer
+            </button>
+          </form>
+
+          <div
+            class="contact-icons project-item"
+            style="
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+              gap: 15px;
+              text-align: center;
+            "
+          >
+            <a
+              href="mailto:louvachey.pro@gmail.com"
+              class="interactive-link contact-box"
+            >
+              <span
+                class="iconify icon-size"
+                data-icon="mdi:email-outline"
+              ></span>
+              <span style="font-size: 0.9rem">Email</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/louvachey"
+              target="_blank"
+              class="interactive-link contact-box"
+            >
+              <span class="iconify icon-size" data-icon="mdi:linkedin"></span>
+              <span style="font-size: 0.9rem">LinkedIn</span>
+            </a>
+            <a
+              href="https://www.instagram.com/dissolvons/"
+              target="_blank"
+              class="interactive-link contact-box"
+            >
+              <span class="iconify icon-size" data-icon="mdi:instagram"></span>
+              <span style="font-size: 0.9rem">Instagram</span>
+            </a>
+            <a
+              href="https://github.com/Dissolvions"
+              target="_blank"
+              class="interactive-link contact-box"
+            >
+              <span class="iconify icon-size" data-icon="mdi:github"></span>
+              <span style="font-size: 0.9rem">GitHub</span>
+            </a>
+          </div>
+        </section>
+
+        <section id="jeu-video" class="page-section">
+          <h2 class="section-title">Jeu Vidéo</h2>
+
+          <article class="project-item">
+            <div class="project-meta">
+              Projet Personnel • 2024 • Équipe de 3
+            </div>
+            <h3 class="title-pink">Beauty Dollz (DressGame)</h3>
+            <div class="video-placeholder interactive-link">
+              <iframe
+                src="https://www.youtube.com/embed/uHpRcQk1BVM"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div style="margin: 30px 0">
+              <h4
+                class="title-pink"
+                style="font-size: 1.1rem; margin-bottom: 15px"
+              >
+                Interface & Gameplay
+              </h4>
+              <div
+                class="gallery-grid"
+                style="grid-template-columns: repeat(3, 1fr); gap: 10px"
+              >
+                <img
+                  src="assets/projets/beauty/debut.png"
+                  class="interactive-link gallery-img"
+                  alt="Menu Principal"
+                  style="height: auto; object-fit: contain"
+                />
+                <img
+                  src="assets/projets/beauty/milieu.png"
+                  class="interactive-link gallery-img"
+                  alt="Interface Jeu"
+                  style="height: auto; object-fit: contain"
+                />
+                <img
+                  src="assets/projets/beauty/fin.png"
+                  class="interactive-link gallery-img"
+                  alt="Résultat"
+                  style="height: auto; object-fit: contain"
+                />
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag tag-green">Unity</span>
+              <span class="tag tag-green">Procreate</span>
+              <span class="tag tag-pink">UI Design</span>
+              <span class="tag tag-pink">Direction Artistique</span>
+            </div>
+            <div class="project-desc">
+              <p>
+                <strong>Contexte :</strong> Développement d'un jeu de
+                personnalisation d'avatar (Dress-Up).
+              </p>
+              <p>
+                <strong>Réalisations :</strong> En charge de toute la partie
+                visuelle et de l'intégration UI, j'ai réalisé les décors et les
+                costumes sur Procreate.
+              </p>
+              <a
+                href="https://mira974.itch.io/beauty-dollz"
+                target="_blank"
+                class="project-link interactive-link"
+                >🔗 Jouer sur Itch.io</a
+              >
+            </div>
+          </article>
+
+          <div class="transition-container">
+            <img
+              src="assets/portfolio/transitionlight.PNG"
+              class="trans-img theme-img-trans"
+            />
+          </div>
+
+          <article class="project-item">
+            <div class="project-meta">
+              Projet Personnel • 2024 • Équipe de 5
+            </div>
+            <h3 class="title-pink">Echoes Of Mirror</h3>
+            <div class="video-placeholder interactive-link">
+              <iframe
+                src="https://www.youtube.com/embed/GNCyGIBrHXc"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="tags">
+              <span class="tag tag-green">Unreal Engine</span>
+              <span class="tag tag-green">Blender</span>
+              <span class="tag tag-pink">Level Art</span>
+              <span class="tag tag-pink">Montage Vidéo</span>
+            </div>
+            <div class="project-desc">
+              <div class="project-desc">
+                <p>
+                  <strong>Contexte :</strong> Développement d'un jeu de parcours
+                  (Platformer 3D) sur le moteur Unreal Engine.
+                </p>
+                <p>
+                  <strong>Réalisations :</strong> J'ai assuré la conception
+                  complète des décors, ainsi que la création des textures et de
+                  la lumière pour les niveaux 1 et 2. J'ai également pris en
+                  charge la direction et le montage du trailer promotionnel du
+                  jeu.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <div class="transition-container">
+            <img
+              src="assets/portfolio/transitionlight.PNG"
+              class="trans-img theme-img-trans"
+            />
+          </div>
+
+          <article class="project-item">
+            <div class="project-meta">
+              DNMADE Numérique • 2022 • Projet individuel
+            </div>
+            <h3 class="title-pink">Poule, Renard, Vipère</h3>
+            <div class="video-placeholder interactive-link">
+              <iframe
+                src="https://www.youtube.com/embed/H2j9a0A-pf0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div style="margin: 30px 0">
+              <h4
+                class="title-pink"
+                style="font-size: 1.1rem; margin-bottom: 15px"
+              >
+                Assets Graphiques
+              </h4>
+              <div
+                class="gallery-grid"
+                style="grid-template-columns: repeat(3, 1fr); gap: 15px"
+              >
+                <img
+                  src="assets/projets/poule-renard-vipere/plateau.jpg"
+                  class="interactive-link gallery-img"
+                  alt="Plateau de jeu"
+                  style="
+                    object-fit: contain;
+                    background: rgba(255, 255, 255, 0.05);
+                  "
+                />
+                <img
+                  src="assets/projets/poule-renard-vipere/chat2.png"
+                  class="interactive-link gallery-img"
+                  alt="Chat"
+                  style="object-fit: contain"
+                />
+                <img
+                  src="assets/projets/poule-renard-vipere/chien2.png"
+                  class="interactive-link gallery-img"
+                  alt="Chien"
+                  style="object-fit: contain"
+                />
+                <img
+                  src="assets/projets/poule-renard-vipere/elephant2.png"
+                  class="interactive-link gallery-img"
+                  alt="Éléphant"
+                  style="object-fit: contain"
+                />
+                <img
+                  src="assets/projets/poule-renard-vipere/loup2.png"
+                  class="interactive-link gallery-img"
+                  alt="Loup"
+                  style="object-fit: contain"
+                />
+                <img
+                  src="assets/projets/poule-renard-vipere/souris2.png"
+                  class="interactive-link gallery-img"
+                  alt="Souris"
+                  style="object-fit: contain"
+                />
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag tag-green">JavaScript</span
+              ><span class="tag tag-pink">Développement Web</span>
+            </div>
+            <div class="project-desc">
+              <p>
+                <strong>Contexte :</strong> Adaptation web interactive du jeu de
+                poule, renard, Vipère.
+              </p>
+              <p>
+                <strong>Réalisations :</strong> Programmation en JavaScript
+                natif, incluant une courbe de difficulté progressive (la vitesse
+                du jeu accélère à chaque réussite). Intégration d'une interface
+                responsive et d'animations CSS fluides. J'ai également réalisé
+                et dessiné tous les assets graphiques.
+              </p>
+            </div>
+          </article>
+
+          <footer class="main-footer">
+            <h3 class="title-pink">Un projet ? Une offre de stage ?</h3>
+            <p>Disponible pour un stage de 12 semaines à partir de mai 2027.</p>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+              "
+            >
+              <a
+                href="mailto:louvachey.pro@gmail.com"
+                class="btn-rounded btn-pink interactive-link"
+                >Me contacter</a
+              >
+              <a
+                href="assets/portfolio/cv_lou_vachey.pdf"
+                target="_blank"
+                class="btn-rounded btn-pink interactive-link"
+                >Télécharger mon CV</a
+              >
+            </div>
+          </footer>
+        </section>
+
+        <section id="motion-design" class="page-section">
+          <h2 class="section-title">Motion Design</h2>
+
+          <article class="project-item">
+            <div class="project-meta">
+              Projet Personnel • 2024 • Projet individuel
+            </div>
+            <h3 class="title-pink">Le vrai métier des Philosophes</h3>
+            <div class="video-placeholder interactive-link">
+              <iframe
+                src="https://www.youtube.com/embed/wL8lGrQba0E"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="tags">
+              <span class="tag tag-green">After Effects</span>
+              <span class="tag tag-green">Blender</span>
+              <span class="tag tag-pink">Storytelling</span>
+            </div>
+            <div class="project-desc">
+              <p>
+                <strong>Contexte :</strong> Création d'une vidéo promotionnelle
+                format réseaux sociaux pour le livre "Le vrai métier des
+                philosophes" de l'auteur Nassim El Kabli (Éditions Fayard).
+              </p>
+              <p>
+                <strong>Réalisations :</strong> Direction artistique en papier
+                découpé (Cut-out) inspirée du style France Culture. Animation
+                dynamique et effets visuels réalisés sous After Effects et
+                Blender pour mettre en valeur le contenu du livre.
+              </p>
+            </div>
+          </article>
+
+          <div class="transition-container">
+            <img
+              src="assets/portfolio/transitionlight.PNG"
+              class="trans-img theme-img-trans"
+            />
+          </div>
+
+          <article class="project-item">
+            <div class="project-meta">Projet Personnel • 2024 • Projet individuel</div>
+            <h3 class="title-pink">Expérience "Point & Click"</h3>
+            <div class="video-placeholder interactive-link">
+              <iframe
+                src="https://www.youtube.com/embed/slsJ-FKgxBM"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div style="margin: 30px 0">
+              <h4
+                class="title-pink"
+                style="font-size: 1.1rem; margin-bottom: 15px"
+              >
+                Assets 3D (Blender)
+              </h4>
+              <div
+                class="gallery-grid"
+                style="grid-template-columns: repeat(3, 1fr); gap: 15px"
+              >
+                <div
+                  class="video-placeholder interactive-link"
+                  style="margin-bottom: 0"
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/2kGi7hiNWGw"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div
+                  class="video-placeholder interactive-link"
+                  style="margin-bottom: 0"
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/K5A57PrB0o0"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div
+                  class="video-placeholder interactive-link"
+                  style="margin-bottom: 0"
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/rdQDldwnBmY"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag tag-green">Blender</span
+              ><span class="tag tag-green">After Effects</span
+              ><span class="tag tag-pink">Photogrammétrie</span>
+            </div>
+            <div class="project-desc">
+              <p>
+                <strong>Contexte :</strong> Conception d'un prototype en motion
+                design de jeu "Point & Click" à ambiance horrifique.
+              </p>
+              <p>
+                <strong>Réalisations :</strong> Utilisation de la
+                photogrammétrie pour numériser l'environnement et obtenir un
+                rendu "glitché". Modélisation 3D sur Blender des éléments
+                narratifs (boîte de médicaments, visage, portail).
+              </p>
+            </div>
+          </article>
+
+          <div class="transition-container">
+            <img
+              src="assets/portfolio/transitionlight.PNG"
+              class="trans-img theme-img-trans"
+            />
+          </div>
+
+          <article class="project-item">
+            <div class="project-meta"> DNMADE Numérique • 2023 • Duo</div>
+            <h3 class="title-pink">Amnesty International : Justyna</h3>
+            <div class="video-placeholder interactive-link">
+              <iframe
+                src="https://www.youtube.com/embed/KIbIdcnAkis"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div style="margin: 30px 0">
+              <h4
+                class="title-pink"
+                style="font-size: 1.1rem; margin-bottom: 15px"
+              >
+                Storyboard & Recherches
+              </h4>
+              <div
+                class="gallery-grid"
+                style="
+                  grid-template-columns: repeat(3, 1fr);
+                  gap: 10px;
+                  margin-bottom: 20px;
+                "
+              >
+                <img
+                  src="assets/projets/amnesty/story1.png"
+                  class="interactive-link gallery-img"
+                  alt="Storyboard 1"
+                  style="height: auto; width: 100%; object-fit: contain"
+                />
+                <img
+                  src="assets/projets/amnesty/story2.png"
+                  class="interactive-link gallery-img"
+                  alt="Storyboard 2"
+                  style="height: auto; width: 100%; object-fit: contain"
+                />
+                <img
+                  src="assets/projets/amnesty/story3.png"
+                  class="interactive-link gallery-img"
+                  alt="Storyboard 3"
+                  style="height: auto; width: 100%; object-fit: contain"
+                />
+              </div>
+
+              <h4
+                class="title-pink"
+                style="font-size: 1.1rem; margin-bottom: 15px; margin-top: 20px"
+              >
+                Illustrations
+              </h4>
+              <div
+                class="gallery-grid"
+                style="grid-template-columns: repeat(3, 1fr); gap: 10px"
+              >
+                <img
+                  src="assets/projets/amnesty/illu1.jpg"
+                  class="interactive-link gallery-img"
+                  alt="Illustration 1"
+                  style="height: 250px; width: 100%; object-fit: cover"
+                />
+                <img
+                  src="assets/projets/amnesty/illu2.jpg"
+                  class="interactive-link gallery-img"
+                  alt="Illustration 2"
+                  style="height: 250px; width: 100%; object-fit: cover"
+                />
+                <img
+                  src="assets/projets/amnesty/illu3.png"
+                  class="interactive-link gallery-img"
+                  alt="Illustration 3"
+                  style="height: 250px; width: 100%; object-fit: cover"
+                />
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag tag-green">Procreate</span
+              ><span class="tag tag-green">After Effects</span
+              ><span class="tag tag-pink">Storyboarding</span>
+            </div>
+            <div class="project-desc">
+              <p>
+                <strong>Contexte :</strong> Ce projet pour Amnesty International
+                vise à sensibiliser aux droits à l'avortement en racontant
+                l'histoire réelle de Justyna.
+              </p>
+              <p>
+                <strong>Réalisations :</strong> En binôme, nous avons produit
+                une animation 2D complète. Nous avons commencé par l'élaboration
+                du storyboard avant d'animer les séquences à l'aide d'After
+                Effects.
+              </p>
+            </div>
+          </article>
+
+          <footer class="main-footer">
+            <h3 class="title-pink">Un projet ? Une offre de stage ?</h3>
+            <p>Disponible pour un stage de 12 semaines à partir de mai 2027.</p>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+              "
+            >
+              <a
+                href="mailto:louvachey.pro@gmail.com"
+                class="btn-rounded btn-pink interactive-link"
+                >Me contacter</a
+              >
+              <a
+                href="assets/portfolio/cv_lou_vachey.pdf"
+                target="_blank"
+                class="btn-rounded btn-pink interactive-link"
+                >Télécharger mon CV</a
+              >
+            </div>
+          </footer>
+        </section>
+
+        <section id="animation-3d" class="page-section">
+          <h2 class="section-title">Animation 3D</h2>
+          <article class="project-item">
+            <div class="project-meta">Projet Personnel • 2025 • Groupe de 4</div>
+            <h3 class="title-pink">Karamoove 2025 "Cirkus"</h3>
+
+            <div
+              class="video-placeholder interactive-link"
+              style="margin-bottom: 20px"
+            >
+              <iframe
+                src="https://www.youtube.com/embed/3jPwp7EPmpM"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div style="margin: 30px 0">
+              <h4
+                class="title-pink"
+                style="font-size: 1.1rem; margin-bottom: 15px"
+              >
+                Assets & Breakdown
+              </h4>
+              <div
+                class="gallery-grid"
+                style="grid-template-columns: repeat(2, 1fr); gap: 15px"
+              >
+                <div
+                  class="video-placeholder interactive-link"
+                  style="margin-bottom: 0; aspect-ratio: 16/9; height: auto"
+                >
+                  <iframe
+                    src="https://www.youtube.com/embed/QG5TYmTLF5k"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <img
+                  src="assets/projets/karamove/BALLON.png"
+                  class="interactive-link gallery-img"
+                  alt="Texture Ballon"
+                  style="height: 100%; object-fit: contain"
+                />
+                <img
+                  src="assets/projets/karamove/cerseau.png"
+                  class="interactive-link gallery-img"
+                  alt="Texture Cerceau"
+                  style="height: 100%; object-fit: contain"
+                />
+                <img
+                  src="assets/projets/karamove/cube.png"
+                  class="interactive-link gallery-img"
+                  alt="Texture Cube"
+                  style="height: 100%; object-fit: contain"
+                />
+              </div>
+            </div>
+
+            <div class="tags">
+              <span class="tag tag-green">Blender</span
+              ><span class="tag tag-green">Substance Painter</span
+              ><span class="tag tag-pink">UV Mapping</span>
+              <span class="tag tag-pink">Modélisation 3D</span>
+            </div>
+            <div class="project-desc">
+              <p>
+                <strong>Contexte :</strong> Participation à l'édition 2025 du
+                "Karamove". Production en groupe d'une animation 3D de 10
+                secondes sur la thématique du cirque.
+              </p>
+              <p>
+                <strong>Réalisations :</strong> Je me suis concentrée sur la
+                création de l'environnement et des accessoires. J'ai réalisé la
+                modélisation, le dépliage UV et le texturing des assets (cheval
+                de carrousel, quilles, ballons) ainsi que du décor principal.
+              </p>
+            </div>
+          </article>
+
+          <div class="transition-container">
+            <img
+              src="assets/portfolio/transitionlight.PNG"
+              class="trans-img theme-img-trans"
+            />
+          </div>
+
+          <article class="project-item">
+            <div class="project-meta">DNMADE Numérique • 2023 • Projet individuel</div>
+            <h3 class="title-pink">Visualiseur</h3>
+            <div class="video-placeholder interactive-link">
+              <iframe
+                src="https://www.youtube.com/embed/cImV351z5zc"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div style="margin: 30px 0">
+              <h4
+                class="title-pink"
+                style="font-size: 1.1rem; margin-bottom: 15px"
+              >
+                Rendus Jour / Nuit
+              </h4>
+              <div
+                class="gallery-grid"
+                style="grid-template-columns: repeat(2, 1fr); gap: 15px"
+              >
+                <img
+                  src="assets/projets/vizualiseur/chambrejour.png"
+                  class="interactive-link gallery-img"
+                  alt="Version Jour"
+                  style="height: auto; object-fit: contain"
+                />
+                <img
+                  src="assets/projets/vizualiseur/chambrenuit.png"
+                  class="interactive-link gallery-img"
+                  alt="Version Nuit"
+                  style="height: auto; object-fit: contain"
+                />
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag tag-green">Blender</span
+              ><span class="tag tag-green">After Effects</span>
+            </div>
+            <div class="project-desc">
+              <p>
+                <strong>Contexte :</strong> Création d'une animation en boucle
+                (loop) pour un visualiseur. Mon objectif était de concevoir un
+                "mini-monde" rassurant et en constant changement, inspiré par la
+                mélodie.
+              </p>
+              <p>
+                <strong>Réalisations :</strong> Intégration de prises de vues
+                réelles sur fond vert (incrustation) dans un environnement 3D.
+                Modélisation complète du décor (zones intérieure et extérieure)
+                et animation d'un cycle jour-nuit pour diversifier la mise en
+                scène.
+              </p>
+            </div>
+          </article>
+
+          <div class="transition-container">
+            <img
+              src="assets/portfolio/transitionlight.PNG"
+              class="trans-img theme-img-trans"
+            />
+          </div>
+
+          <article class="project-item">
+            <div class="project-meta">Recherche & Développement</div>
+            <h3 class="title-pink">Expérimentations 3D</h3>
+            <div class="tags">
+              <span class="tag tag-green">Blender</span
+              ><span class="tag tag-pink">After Effects</span>
+            </div>
+            <div style="margin-bottom: 40px">
+              <div class="video-placeholder interactive-link">
+                <iframe
+                  src="https://www.youtube.com/embed/6xkoL0T8M-Y"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p>
+                Expérimentation réalisée sur Blender et After Effects, mettant
+                en scène un effet de rotation sur des dents.
+              </p>
+            </div>
+            <div
+              style="
+                margin-bottom: 40px;
+                padding-top: 20px;
+                border-top: 1px dashed var(--sidebar-border);
+              "
+            >
+              <div class="video-placeholder interactive-link">
+                <iframe
+                  src="https://www.youtube.com/embed/ULY7koqowe8"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p>Expérimentation de l'animation réalisée sur Blender.</p>
+            </div>
+            <div
+              style="
+                padding-top: 20px;
+                border-top: 1px dashed var(--sidebar-border);
+              "
+            >
+              <div class="video-placeholder interactive-link">
+                <iframe
+                  src="https://www.youtube.com/embed/GnE8hAaMn20"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p>
+                Expérimentation de l'animation de texte réalisée sur Blender.
+              </p>
+            </div>
+          </article>
+
+          <footer class="main-footer">
+            <h3 class="title-pink">Un projet ? Une offre de stage ?</h3>
+            <p>Disponible pour un stage de 12 semaines à partir de mai 2027.</p>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+              "
+            >
+              <a
+                href="mailto:louvachey.pro@gmail.com"
+                class="btn-rounded btn-pink interactive-link"
+                >Me contacter</a
+              >
+              <a
+                href="assets/portfolio/cv_lou_vachey.pdf"
+                target="_blank"
+                class="btn-rounded btn-pink interactive-link"
+                >Télécharger mon CV</a
+              >
+            </div>
+          </footer>
+        </section>
+
+        <section id="illustrations" class="page-section">
+          <h2 class="section-title">Illustrations</h2>
+
+        <article class="project-item" style="margin-bottom: 60px">
+            <div class="project-meta">Stage Professionnel • 2026 • Projet individuel</div>
+            <h3 class="title-pink">Ouvrage : "Ceux de Colombes"</h3>
+
+            
+
+            <img
+              src="assets/projets/stage/9_ceuxdecolombe.PNG"
+              class="interactive-link gallery-img"
+              alt="Portraits Ceux de Colombes"
+              style="
+                width: 100%;
+                height: auto !important; 
+                max-height: none !important; 
+                object-fit: contain; 
+                display: block;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+              "
+            />
+              <div class="tags" style="margin-top: 10px; margin-bottom: 25px">
+              <span class="tag tag-green">Procreate</span>
+              <span class="tag tag-pink">Illustration</span>
+              <span class="tag tag-pink">Édition</span>
+            </div>
+          <div class="project-desc" style="margin-top: 25px;">
+              <p>
+                <strong>Contexte :</strong> Réalisation de 25 portraits pour un ouvrage sur l'histoire du stade de Colombes. L'auteur exigeait un traitement visuel en noir et blanc.
+              </p>
+              <p>
+                <strong>Réalisations :</strong> Utilisation de la technique du décalquage sur Procreate pour produire efficacement cette série d'images. L'ensemble maintient une cohérence graphique avec le texte du livre.
+              </p>
+            </div>
+          </article>
+        
+        
+          <div class="transition-container" style="margin: 50px 0">
+            <img
+              src="assets/portfolio/transitionlight.PNG"
+              class="trans-img theme-img-trans"
+            />
+          </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          <article class="project-item" style="margin-bottom: 60px">
+            <div class="project-meta">2023 - 2024</div>
+            <h3 class="title-pink">Dessin d'Imagination</h3>
+
+            <div class="tags" style="margin-top: 10px; margin-bottom: 25px">
+              <span class="tag tag-green">Procreate</span>
+            </div>
+
+            <img
+              src="assets/projets/illustrations/illu1.png"
+              class="interactive-link gallery-img"
+              alt="Dessin d'Imagination"
+              style="
+                width: 100%;
+                height: auto !important; /* La hauteur suit l'image */
+                max-height: none !important; /* AUCUNE limite de hauteur */
+                object-fit: contain; /* Affiche tout le contenu */
+                display: block;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+              "
+            />
+          </article>
+
+          <div class="transition-container" style="margin: 50px 0">
+            <img
+              src="assets/portfolio/transitionlight.PNG"
+              class="trans-img theme-img-trans"
+            />
+          </div>
+
+          <article class="project-item" style="margin-bottom: 60px">
+            <div class="project-meta">2023 - 2024</div>
+            <h3 class="title-pink">Dessin d'Observation</h3>
+
+            <div class="tags" style="margin-top: 10px; margin-bottom: 25px">
+              <span class="tag tag-green">Techniques Mixtes</span>
+            </div>
+
+            <img
+              src="assets/projets/illustrations/illu2.png"
+              class="interactive-link gallery-img"
+              alt="Dessin d'Observation"
+              style="
+                width: 100%;
+                height: auto !important; /* La hauteur suit l'image */
+                max-height: none !important; /* AUCUNE limite de hauteur */
+                object-fit: contain; /* Affiche tout le contenu */
+                display: block;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+              "
+            />
+          </article>
+
+          <footer class="main-footer">
+            <h3 class="title-pink">Un projet ? Une offre de stage ?</h3>
+            <p>Disponible pour un stage de 12 semaines à partir de mai 2027.</p>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+              "
+            >
+              <a
+                href="mailto:louvachey.pro@gmail.com"
+                class="btn-rounded btn-pink interactive-link"
+                >Me contacter</a
+              >
+              <a
+                href="assets/portfolio/cv_lou_vachey.pdf"
+                target="_blank"
+                class="btn-rounded btn-pink interactive-link"
+                >Télécharger mon CV</a
+              >
+            </div>
+          </footer>
+        </section>
+
+        <section id="graphisme" class="page-section">
+          <h2 class="section-title">Design Graphique</h2>
+
+          <!-- PROJET STAGE -->
+          <article class="project-item">
+            <div class="project-meta">Stage Professionnel • 2026 • Projet individuel</div>
+            <h3 class="title-pink">Édition : Couvertures de livres</h3>
+
+            <h4 class="title-pink" style="font-size: 1.1rem; margin: 20px 0 15px;">Ouvrage : "Le Poulbot"</h4>
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 20px">
+              <img src="assets/projets/stage/2.3_poulbotpropositionenfants.png" class="interactive-link gallery-img" alt="Poulbot - Proposition enfants" style="width: 100%; height: auto; object-fit: contain" />
+              <img src="assets/projets/stage/poulbotv2_petitefille.png" class="interactive-link gallery-img" alt="Poulbot - Version 2" style="width: 100%; height: auto; object-fit: contain" />
+              <img src="assets/projets/stage/2.4_poulbotchoisieparlauteur.png" class="interactive-link gallery-img" alt="Poulbot - Choix auteur" style="width: 100%; height: auto; object-fit: contain" />
+            </div>
+
+            <div class="tags">
+              <span class="tag tag-green">Photoshop</span>
+              <span class="tag tag-green">Procreate</span>
+              <span class="tag tag-pink">Édition</span>
+              <span class="tag tag-pink">Design de couverture</span>
+            </div>
+
+            <div class="project-desc">
+              <p>
+                <strong>Contexte :</strong> Conception de la couverture de l'ouvrage "Le Poulbot, les enfants de Montmartre" à partir du brief initial et des échanges entre l'auteur et la maison d'édition.
+              </p>
+              <p>
+                <strong>Réalisations :</strong> Création de croquis soumis à l'équipe puis validés par la direction. Production du fichier final sur Photoshop en respectant les contraintes d'impression (CMJN, fonds perdus) et application des corrections suite aux retours des auteurs.
+              </p>
+            </div>
+
+            <hr style="border: none; border-top: 7px dashed var(--sidebar-border); margin: 40px 0;" />
+
+            <h4 class="title-pink" style="font-size: 1.1rem; margin-bottom: 15px;">Ouvrage : "Artisans de paix"</h4>
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 20px">
+              <img src="assets/projets/stage/3.1_artisansdepaixcroquis.PNG" class="interactive-link gallery-img" alt="Artisans de paix - Croquis" style="width: 100%; height: auto; object-fit: contain" />
+              <img src="assets/projets/stage/3.2_artisandepaixdessin.JPG" class="interactive-link gallery-img" alt="Artisans de paix - Dessin" style="width: 100%; height: auto; object-fit: contain" /> 
+              <img src="assets/projets/stage/3.3_artisantdepaixproposition.jpg" class="interactive-link gallery-img" alt="Artisans de paix - Proposition" style="width: 100%; height: auto; object-fit: contain" />
+            </div>
+
+            <div class="tags">
+              <span class="tag tag-green">Photoshop</span>
+              <span class="tag tag-green">Procreate</span>
+              <span class="tag tag-pink">Édition</span>
+              <span class="tag tag-pink">Design de couverture</span>
+            </div>
+
+            <div class="project-desc">
+              <p>
+                <strong>Contexte :</strong> Conception de la couverture de l'ouvrage "Artisans de paix" avec une contrainte de temps stricte de 3 jours suite à la réception du brief.
+              </p>
+              <p>
+                <strong>Réalisations :</strong> Organisation optimisée pour produire efficacement les croquis, les propositions graphiques et la couverture finale dans les délais, en suivant le processus de validation en équipe.
+              </p>
+            </div>
+          </article>
+
+          <div class="transition-container">
+            <img src="assets/portfolio/transitionlight.PNG" class="trans-img theme-img-trans" />
+          </div>
+
+       <!-- PROJET THEODORA - COMPLET -->
+          <article class="project-item">
+            <div class="project-meta">BUT M.M.I • Projet en équipe de 3</div>
+            <h3 class="title-pink">Campagne 360° : Théodora XX</h3>
+
+            <!-- Partie 1 : Direction Artistique -->
+            <h4 class="title-pink" style="font-size: 1.1rem; margin: 20px 0 15px;">Direction Artistique et Modélisation 3D</h4>
+             <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px">
+              <img src="assets/projets/theodora/1.jpg" class="interactive-link gallery-img" alt="Page 1" style="height: auto; object-fit: contain;" />
+              <img src="assets/projets/theodora/2.jpg" class="interactive-link gallery-img" alt="Page 2" style="height: auto; object-fit: contain;" />
+              <img src="assets/projets/theodora/3.jpg" class="interactive-link gallery-img" alt="Page 3" style="height: auto; object-fit: contain;" />
+              <img src="assets/projets/theodora/4.jpg" class="interactive-link gallery-img" alt="Page 4" style="height: auto; object-fit: contain;" />
+              <img src="assets/projets/theodora/5.jpg" class="interactive-link gallery-img" alt="Page 5" style="height: auto; object-fit: contain;" />
+              <img src="assets/projets/theodora/6.jpg" class="interactive-link gallery-img" alt="Page 6" style="height: auto; object-fit: contain;" />
+              <img src="assets/projets/theodora/7.jpg" class="interactive-link gallery-img" alt="Page 7" style="height: auto; object-fit: contain;" />
+              <img src="assets/projets/theodora/8.jpg" class="interactive-link gallery-img" alt="Page 8" style="height: auto; object-fit: contain;" />
+              <img src="assets/projets/theodora/9.jpg" class="interactive-link gallery-img" alt="Page 9" style="height: auto; object-fit: contain;" />
+              <img src="assets/projets/theodora/10.jpg" class="interactive-link gallery-img" alt="Page 10" style="height: auto; object-fit: contain;" />
+              <img src="assets/projets/theodora/11.jpg" class="interactive-link gallery-img" alt="Page 11" style="height: auto; object-fit: contain;" />
+              <img src="assets/projets/theodora/12.jpg" class="interactive-link gallery-img" alt="Page 12" style="height: auto; object-fit: contain;" />
+              <img src="assets/projets/theodora/13.jpg" class="interactive-link gallery-img" alt="Page 13" style="height: auto; object-fit: contain;" />
+              <img src="assets/projets/theodora/14.jpg" class="interactive-link gallery-img" alt="Page 14" style="height: auto; object-fit: contain;" />
+              <img src="assets/projets/theodora/15.jpg" class="interactive-link gallery-img" alt="Page 15" style="height: auto; object-fit: contain;" />
+              <img src="assets/projets/theodora/16.jpg" class="interactive-link gallery-img" alt="Page 16" style="height: auto; object-fit: contain;" />
+               <img src="assets/projets/theodora/17.jpg" class="interactive-link gallery-img" alt="Page 16" style="height: auto; object-fit: contain;" />
+            </div>
+
+            <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+              <a href="assets/projets/theodora/Theodora XX.pdf" target="_blank" class="btn-rounded btn-pink interactive-link">Consulter la présentation (PDF)</a>
+            </div>
+
+            <div class="tags" style="margin-top: 20px;">
+              <span class="tag tag-green">Photoshop</span>
+              <span class="tag tag-green">Blender</span>
+              <span class="tag tag-pink">Direction Artistique</span>
+              <span class="tag tag-pink">Modélisation 3D</span>
+            </div>
+
+            <div class="project-desc" style="margin-top: 25px;">
+              <p>
+              <strong>Contexte :</strong>  Réalisation d'une campagne de communication visuelle complète pour la tournée "World Tour Théodora XX". Élaboration de la direction artistique, définition de la charte graphique et conception des produits dérivés.
+              </p>
+              <p>
+                <strong>Réalisations :</strong> Modélisation 3D du coffret physique contenant les éléments promotionnels, incluant le CD et le DVD de l'artiste.
+              </p>
+            </div>
+
+            <!-- Ligne de séparation pointillée -->
+            <hr style="border: none; border-top: 7px dashed var(--sidebar-border); margin: 40px 0;" />
+
+            <!-- Partie 2 : Édition Livret -->
+            <h4 class="title-pink" style="font-size: 1.1rem; margin-bottom: 15px;">Édition : Livret Théodora XX</h4>
+            
+            
+            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px;">
+               <img src="assets/projets/theodora/sae401-livretimpressionpng9.png" class="interactive-link gallery-img" alt="Dos du magazine" style="height: auto; max-height: 500px; width: auto; object-fit: contain;" />
+               <img src="assets/projets/theodora/sae401-livretimpressionpng.png" class="interactive-link gallery-img" alt="Couverture Magazine" style="height: auto; max-height: 500px; width: auto; object-fit: contain;" />
+            </div>
+    
+            
+            
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(1, 1fr); gap: 10px; margin-bottom: 20px">
+              
+              <img src="assets/projets/theodora/sae401-livretimpressionpng2.png" class="interactive-link gallery-img" alt="Présentation 2" style="height: auto; object-fit: contain;" />
+              <img src="assets/projets/theodora/sae401-livretimpressionpng3.png" class="interactive-link gallery-img" alt="Présentation 3" style="height: auto; object-fit: contain;" />
+              <img src="assets/projets/theodora/sae401-livretimpressionpng4.png" class="interactive-link gallery-img" alt="Présentation 4" style="height: auto; object-fit: contain;" />
+              <img src="assets/projets/theodora/sae401-livretimpressionpng5.png" class="interactive-link gallery-img" alt="Présentation 5" style="height: auto; object-fit: contain;" />
+              <img src="assets/projets/theodora/sae401-livretimpressionpng6.png" class="interactive-link gallery-img" alt="Présentation 6" style="height: auto; object-fit: contain;" />
+              <img src="assets/projets/theodora/sae401-livretimpressionpng7.png" class="interactive-link gallery-img" alt="Présentation 7" style="height: auto; object-fit: contain;" />
+              <img src="assets/projets/theodora/sae401-livretimpressionpng8.png" class="interactive-link gallery-img" alt="Présentation 8" style="height: auto; object-fit: contain;" />
+          
+            </div>
+
+          
+           
+            
+            <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+              <a href="assets/projets/theodora/sae401-livretimpression.pdf" target="_blank" class="btn-rounded btn-pink interactive-link">Consulter le livret complet (PDF)</a>
+            </div>
+
+            <div class="tags" style="margin-top: 20px;">
+              <span class="tag tag-green">InDesign</span>
+              <span class="tag tag-green">Procreate</span>
+              <span class="tag tag-pink">Édition</span>
+              <span class="tag tag-pink">Illustration</span>
+            </div>
+
+            <div class="project-desc" style="margin-top: 25px;">
+              <p>
+               <strong>Contexte :</strong> Conception et mise en page d'un livret éditorial accompagnant le projet "Théodora XX". Le travail inclut la structuration du contenu texte et image sur l'ensemble des pages.
+              </p>
+              <p>
+                <strong>Réalisations :</strong> Recherches de personnages et création de la narration visuelle pour la bande dessinée intégrée au livret.
+              </p>
+            </div>
+          </article>
+
+          <div class="transition-container">
+            <img src="assets/portfolio/transitionlight.PNG" class="trans-img theme-img-trans" />
+          </div>
+
+          <!-- PROJET MAGAZINE INTERACTIF -->
+          <article class="project-item">
+            <div class="project-meta">BUT M.M.I • 2025 • Projet individuel</div>
+            <h3 class="title-pink">Magazine Interactif (Disco Elysium)</h3>
+            <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+              <img src="assets/projets/magazine/cover.png" class="interactive-link gallery-img" alt="Couverture Magazine" style="height: auto; max-height: 500px; width: auto; object-fit: contain;" />
+            </div>
+            <div class="gallery-grid" style="display: grid; grid-template-columns: 1fr; gap: 20px; margin-bottom: 20px;">
+              <img src="assets/projets/magazine/planche1.png" class="interactive-link gallery-img" alt="Double Page 1-2 (Sommaire)" style="width: 100%; height: auto; object-fit: contain" />
+              <img src="assets/projets/magazine/planche2.png" class="interactive-link gallery-img" alt="Double Page 3-4" style="width: 100%; height: auto; object-fit: contain" />
+              <img src="assets/projets/magazine/planche3.png" class="interactive-link gallery-img" alt="Double Page 5-6" style="width: 100%; height: auto; object-fit: contain" />
+              <img src="assets/projets/magazine/planche4.png" class="interactive-link gallery-img" alt="Double Page 7-8" style="width: 100%; height: auto; object-fit: contain" />
+              <img src="assets/projets/magazine/planche5.png" class="interactive-link gallery-img" alt="Double Page 9-10" style="width: 100%; height: auto; object-fit: contain" />
+            </div>
+            
+            <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+              <img src="assets/projets/magazine/dos.png" class="interactive-link gallery-img" alt="Dos du magazine" style="height: auto; max-height: 500px; width: auto; object-fit: contain;" />
+            </div>
+
+            <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+              <a href="assets/projets/magazine/magazine.pdf" target="_blank" class="btn-rounded btn-pink interactive-link">Consulter la présentation (PDF)</a>
+            </div>
+            
+            <div class="tags">
+              <span class="tag tag-green">InDesign</span>
+              <span class="tag tag-pink">Édition Numérique</span>
+              <span class="tag tag-pink">Interactivité</span>
+            </div>
+            <div class="project-desc">
+              <p>
+                <strong>Contexte :</strong> Conception et réalisation graphique d'un magazine numérique interactif. Ce numéro spécial propose une analyse culturelle et politique du jeu vidéo Disco Elysium.
+              </p>
+              <p>
+                <strong>Réalisations :</strong> Création de la charte graphique et mise en page sur InDesign. Le projet intègre des fonctionnalités interactives (navigation, hyperliens, boutons) pour optimiser l'expérience de lecture sur écran.
+              </p>
+            </div>
+          </article>
+
+          <div class="transition-container">
+            <img src="assets/portfolio/transitionlight.PNG" class="trans-img theme-img-trans" />
+          </div>
+
+       
+          <!-- PROJET TYPOGRAPHIE VOX -->
+          <article class="project-item">
+            <div class="project-meta">DNMADE Graphisme • 2021 • Projet individuel</div>
+            <h3 class="title-pink">Typographie VOX</h3>
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 30px;">
+              <img src="assets/projets/vox/vox1.jpg" class="interactive-link gallery-img" alt="Dépliant Face 1" style="height: auto; object-fit: contain" />
+              <img src="assets/projets/vox/vox2.jpg" class="interactive-link gallery-img" alt="Dépliant Face 2" style="height: auto; object-fit: contain" />
+            </div>
+            <div style="margin: 30px 0">
+              <h4 class="title-pink" style="font-size: 1.1rem; margin-bottom: 15px">Expérimentations Typographiques</h4>
+              <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px">
+                <img src="assets/projets/vox/expe1.jpg" class="interactive-link gallery-img" style="height: auto; object-fit: contain" />
+                <img src="assets/projets/vox/expe2.jpg" class="interactive-link gallery-img" style="height: auto; object-fit: contain" />
+                <img src="assets/projets/vox/expe3.jpg" class="interactive-link gallery-img" style="height: auto; object-fit: contain" />
+                <img src="assets/projets/vox/expe4.jpg" class="interactive-link gallery-img" style="height: auto; object-fit: contain" />
+                <img src="assets/projets/vox/expe5.jpg" class="interactive-link gallery-img" style="height: auto; object-fit: contain" />
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag tag-green">Illustrator</span>
+              <span class="tag tag-pink">Typographie</span>
+              <span class="tag tag-pink">InDesign</span>
+            </div>
+            <div class="project-desc">
+              <p>
+                <strong>Contexte :</strong> Conception graphique du dépliant pour la programmation théâtrale VOX. Objectif : une mise en page purement typographique et expressive.
+              </p>
+              <p>
+                <strong>Réalisations :</strong> Expérimentations au scanner pour donner une texture visuelle aux mots (vibration musicale). Application d'effets miroirs pour densifier la lecture et traiter le texte comme une image.
+              </p>
+            </div>
+          </article>
+          
+          <footer class="main-footer">
+            <h3 class="title-pink">Un projet ? Une offre de stage ?</h3>
+            <p>Disponible pour un stage de 12 semaines à partir de mai 2027.</p>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+              <a href="mailto:louvachey.pro@gmail.com" class="btn-rounded btn-pink interactive-link">Me contacter</a>
+              <a href="assets/portfolio/cv_lou_vachey.pdf" target="_blank" class="btn-rounded btn-pink interactive-link">Télécharger mon CV</a>
+            </div>
+          </footer>
+
+        </section>
+
+        <section id="web-vr" class="page-section">
+          <h2 class="section-title">Développement Web & VR</h2>
+          <article class="project-item">
+            <div class="project-meta">BUT M.M.I • 2025 • Projet individuel</div>
+            <h3 class="title-pink">Sites Web</h3>
+
+            <img
+              src="assets/projets/sites/sites3.png"
+              class="interactive-link gallery-img"
+              alt="Site Web 3"
+              style="
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                margin-bottom: 15px;
+              "
+            />
+
+            <div
+              class="gallery-grid"
+              style="grid-template-columns: repeat(2, 1fr); gap: 15px"
+            >
+              <img
+                src="assets/projets/sites/site1.png"
+                class="interactive-link gallery-img"
+                alt="Site Web 1"
+                style="
+                  height: 300px;
+                  width: 100%;
+                  object-fit: cover;
+                  object-position: top;
+                "
+              />
+              <img
+                src="assets/projets/sites/site2.png"
+                class="interactive-link gallery-img"
+                alt="Site Web 2"
+                style="
+                  height: 300px;
+                  width: 100%;
+                  object-fit: cover;
+                  object-position: top;
+                "
+              />
+            </div>
+
+            <div class="tags">
+              <span class="tag tag-green">HTML/CSS/JS</span
+              ><span class="tag tag-pink">Webdesign</span>
+            </div>
+            <div class="project-desc">
+              <p>
+                <strong>Contexte :</strong> Conception et développement de
+                plusieurs sites web (dont ce portfolio) et de prototypes de
+                sites fictifs.
+              </p>
+              <p>
+                <strong>Réalisations :</strong> Intégration complète en HTML,
+                CSS et JavaScript. J'ai implémenté des fonctionnalités
+                interactives variées comme le mode sombre (Dark Mode) et des
+                effets de parallaxe pour dynamiser la navigation.
+              </p>
+            </div>
+          </article>
+          <div class="transition-container">
+            <img
+              src="assets/portfolio/transitionlight.PNG"
+              class="trans-img theme-img-trans"
+            />
+          </div>
+          <article class="project-item">
+            <div class="project-meta">DNMADE Numérique • 2022 • Projet individuel</div>
+            <h3 class="title-pink">Labyrinthe VR (A-Frame)</h3>
+            <div class="gallery-grid">
+              <img
+                src="assets/projets/labyrinthe/labyrinthe1.png"
+                class="interactive-link gallery-img"
+                alt="Vue 1"
+              />
+              <img
+                src="assets/projets/labyrinthe/labyrinthe2.png"
+                class="interactive-link gallery-img"
+                alt="Vue 2"
+              />
+              <img
+                src="assets/projets/labyrinthe/labyrinthe3.png"
+                class="interactive-link gallery-img"
+                alt="Vue 3"
+              />
+              <img
+                src="assets/projets/labyrinthe/labyrinthe4.png"
+                class="interactive-link gallery-img"
+                alt="Vue 4"
+              />
+            </div>
+            <div class="tags">
+              <span class="tag tag-green">A-Frame</span
+              ><span class="tag tag-green">HTML/CSS</span>
+            </div>
+
+            <div class="project-desc">
+              <p>
+                <strong>Contexte :</strong> Conception d'un labyrinthe immersif
+                en réalité virtuelle (WebVR) avec pour objectif de désorienter
+                l'utilisateur.
+              </p>
+              <p>
+                <strong>Réalisations :</strong> J'ai conçu un environnement
+                médiéval avec des murs ornés de vitraux et ajouté du brouillard
+                pour accentuer l'ambiance oppressante.
+              </p>
+            </div>
+          </article>
+
+          <div class="transition-container">
+            <img
+              src="assets/portfolio/transitionlight.PNG"
+              class="trans-img theme-img-trans"
+            />
+          </div>
+
+          <article class="project-item">
+            <div class="project-meta">DNMADE Numérique • 2022 • Projet individuel</div>
+            <h3 class="title-pink">Expérimentation WebVR</h3>
+            <div class="video-placeholder interactive-link">
+              <iframe
+                src="https://www.youtube.com/embed/17NS-emHS8g"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div style="margin: 30px 0">
+              <h4
+                class="title-pink"
+                style="font-size: 1.1rem; margin-bottom: 15px"
+              >
+                Aperçus de la scène
+              </h4>
+              <div
+                class="gallery-grid"
+                style="grid-template-columns: repeat(3, 1fr); gap: 10px"
+              >
+                <img
+                  src="assets/projets/grotte/grotte1.png"
+                  class="interactive-link gallery-img"
+                  alt="Vue 1"
+                  style="height: 250px; width: 100%; object-fit: cover"
+                />
+                <img
+                  src="assets/projets/grotte/grotte2.png"
+                  class="interactive-link gallery-img"
+                  alt="Vue 2"
+                  style="height: 250px; width: 100%; object-fit: cover"
+                />
+                <img
+                  src="assets/projets/grotte/grotte3.png"
+                  class="interactive-link gallery-img"
+                  alt="Vue 3"
+                  style="height: 250px; width: 100%; object-fit: cover"
+                />
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag tag-green">A-Frame</span
+              ><span class="tag tag-green">HTML/CSS</span>
+            </div>
+            <div class="project-desc">
+              <p>
+                <strong>Contexte :</strong> Conception d'une expérience en
+                réalité virtuelle visant à créer l'illusion d'une grotte
+                composée de cristaux.
+              </p>
+              <p>
+                <strong>Réalisations :</strong> J'ai réalisé la structure de
+                base via une maquette en papier (pop-up) que j'ai numérisée.
+                J'ai ensuite codé les animations lumineuses sur VSCode pour
+                simuler le scintillement des cristaux.
+              </p>
+            </div>
+          </article>
+
+          <footer class="main-footer">
+            <h3 class="title-pink">Un projet ? Une offre de stage ?</h3>
+            <p>Disponible pour un stage de 12 semaines à partir de mai 2027.</p>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+              "
+            >
+              <a
+                href="mailto:louvachey.pro@gmail.com"
+                class="btn-rounded btn-pink interactive-link"
+                >Me contacter</a
+              >
+              <a
+                href="assets/portfolio/cv_lou_vachey.pdf"
+                target="_blank"
+                class="btn-rounded btn-pink interactive-link"
+                >Télécharger mon CV</a
+              >
+            </div>
+          </footer>
+        </section>
+      </main>
+    </div>
+
+<div id="legal-modal" class="modal">
+  <div class="modal-content project-item">
+    <span class="close-modal interactive-link">&times;</span>
+    <h3 class="title-pink">Mentions Légales</h3>
+    
+    <p>
+      <strong>Éditeur du site :</strong> Lou Vachey, étudiante en Licence professionelle Métier du jeu vidéo, à l'Université Sorbonne Paris Nord, campus de Bobigny. Contact : louvachey.pro@gmail.com.
+    </p>
+    <p></p>
+    <p>
+      <strong>Hébergement :</strong> Ce site (https://dissolvions.github.io/VacheyLou_Portfolio/) est hébergé par GitHub Pages. L'hébergeur est la société GitHub, Inc., dont le siège social est situé au 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis.
+    </p>
+    <p></p>
+    <p>
+      <strong>Propriété intellectuelle :</strong> L'ensemble des éléments figurant sur ce site (textes, images, éléments graphiques, modélisations 3D, vidéos, animations) est la propriété exclusive de Lou Vachey, à l'exception des marques, logos ou contenus appartenant à d'autres partenaires, auteurs ou associations cités. Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sans autorisation écrite préalable.
+    </p>
+  </div>
+</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
